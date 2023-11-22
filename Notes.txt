@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 15 DOM</title>
+</head>
+<body>
+    <!-- <h1>Hi Hello welcome to the website😎</h1>
+    <span></span>  -->
+    <textarea id="textarea" name="INput area" rows="10" cols="30"></textarea>
+    <span></span>
+    <script src="./script.js"></script>
+</body>
+</html>
+
+//?Display the mouse X and Y coordinates in a <span> tag when you click on a <h1> tag which contains a paragraph.
+/*const element = document.querySelector("h1");
+element.addEventListener("click",(ele)=>{
+    document.querySelector(
+        "span"
+    ).innerText= `coordinates of X = ${ele.pageX} and y = ${ele.pageY}`;
+}); 
+*/
+//*Write a Javascript code for character counts in the textarea.
+const textarea = document.getElementById("textarea");
+textarea.addEventListener("input",(element)=>{
+    document.querySelector(
+        "span"
+    ).innerText = `character in the textarea ${element.target.value.length}`;
+});
